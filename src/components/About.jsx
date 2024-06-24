@@ -25,7 +25,7 @@ function About() {
             <div className="right-about min-w-[50%] pt-60 relative" data-scroll-container>
                 <div className="img w-[25rem] h-[26rem] ml-28 mt-60 mb-28 z-10" data-scroll data-scroll-speed=".15">
                     <Image
-                    className='object-cover' 
+                    className='object-cover w-full h-full' 
                     src="/images/about/about-r.webp" 
                     alt="image"
                     width= {500}
