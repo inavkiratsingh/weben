@@ -15,8 +15,7 @@ function About() {
                     src="/images/about/about-l.webp" 
                     alt="image"
                     width= {500}
-                    height={500}
-                    objectFit='cover' />
+                    height={500}/>
                 </div>
                 <p className='w-64 grotesk text-[1.23rem] ml-[400px] leading-8'>
                     At <strong>Weben</strong>, we’re all about <strong>action</strong>. What are the specific <strong>actions</strong> that fuel your company's growth? Do you need more consumers to <strong>buy</strong> your product? Want more people to <strong>subscribe</strong> to your list, <strong>download</strong> your app, or <strong>learn</strong> about your brand? Or perhaps your goal is simply to <strong>generate</strong> more leads for your products and services? Whatever <strong>actions</strong> you're targeting, <strong>Vrrb</strong> can help.
@@ -29,8 +28,7 @@ function About() {
                     src="/images/about/about-r.webp" 
                     alt="image"
                     width= {500}
-                    height={500}
-                    objectFit='cover' />
+                    height={500} />
                 </div>
                 <div className="absolute circle bg-[#FF5E5E] w-72 h-72 rounded-full z-20 top-72" data-scroll data-scroll-speed="-.05"></div>
                 <p className='w-[500px] text-7xl grotesk leading-[5.3rem]'>

@@ -26,7 +26,7 @@ function Hero() {
 
             <div className='pl-[350px] pr-[750px] flex flex-wrap mt-10 headline'>
                 {"We launch winning brands and build extraordinary digital experiences.".split(" ").map((item, index) => (
-                    index === 7 ? <span className='opacity-0 text-8xl grotesk tracking-tight leading-[7rem] mr-12'>{item}</span> : <span className='opacity-0 text-8xl grotesk tracking-tight leading-[6rem] mr-7'>{item}</span>
+                    index === 7 ? <span key={index} className='opacity-0 text-8xl grotesk tracking-tight leading-[7rem] mr-12'>{item}</span> : <span key={index} className='opacity-0 text-8xl grotesk tracking-tight leading-[6rem] mr-7'>{item}</span>
                 ))}
             </div>
             <div className="absolute w-full top-[23rem] flex justify-center">
