@@ -1,8 +1,31 @@
+"use client"
+import gsap from 'gsap';
 import Image from 'next/image';
-import React from 'react'
+import React, { useEffect } from 'react'
 import { HiArrowLongRight } from "react-icons/hi2";
 
 function About() {
+    
+    function animate()  {
+        var tl = gsap.timeline();
+        tl.from(".left-about img", {
+            y: 170,
+            opacity: 0
+        })
+        tl.to(".left-about img", {
+            y: 0,
+            duration: .8,
+            ease: "slow(0.7,0.7,false)",
+            delay: 0.6,
+            stagger: .12,
+            opacity: 1
+        })
+        
+    }
+
+    useEffect(() => {
+      animate()
+    })
     
 
 
@@ -18,7 +41,7 @@ function About() {
                     height={500}/>
                 </div>
                 <p className='w-64 grotesk text-[1.23rem] ml-[400px] leading-8'>
-                    At <strong>Weben</strong>, we’re all about <strong>action</strong>. What are the specific <strong>actions</strong> that fuel your company's growth? Do you need more consumers to <strong>buy</strong> your product? Want more people to <strong>subscribe</strong> to your list, <strong>download</strong> your app, or <strong>learn</strong> about your brand? Or perhaps your goal is simply to <strong>generate</strong> more leads for your products and services? Whatever <strong>actions</strong> you're targeting, <strong>Vrrb</strong> can help.
+                    At <strong>Weben</strong>, we&apos;re all about <strong>action</strong>. What are the specific <strong>actions</strong> that fuel your company&apos;s growth? Do you need more consumers to <strong>buy</strong> your product? Want more people to <strong>subscribe</strong> to your list, <strong>download</strong> your app, or <strong>learn</strong> about your brand? Or perhaps your goal is simply to <strong>generate</strong> more leads for your products and services? Whatever <strong>actions</strong> you&apos;re targeting, <strong>Vrrb</strong> can help.
                 </p>
             </div>
             <div className="right-about min-w-[50%] pt-60 relative" data-scroll-container>
@@ -31,7 +54,7 @@ function About() {
                     height={500} />
                 </div>
                 <div className="absolute circle bg-[#FF5E5E] w-72 h-72 rounded-full z-20 top-72" data-scroll data-scroll-speed="-.05"></div>
-                <p className='w-[500px] text-7xl grotesk leading-[5.3rem]'>
+                <p className='w-[500px] text-7xl grotesk leading-["5.3rem"]'>
                     Weben has the people, the ideas, and the know-how to get your business where you want it to go.
                 </p>
                 <a href="#" className='flex items-center  gap-2 mt-8 text-lg grotesk'><HiArrowLongRight />Learn more about us</a>

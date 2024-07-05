@@ -6,6 +6,7 @@ import LocomotiveScroll from "locomotive-scroll";
 import Start_pr from "@/components/Start_pr";
 import React, { useEffect } from "react";
 import gsap from "gsap";
+import Projects from "@/components/Projects";
 
 export default function Home() {
 
@@ -22,16 +23,6 @@ export default function Home() {
 
     })
 
-    // document.querySelector('#child1').addEventListener("mouseenter",function(){
-    //     gsap.to('.cursor',{
-    //     transform: 'translate(-50%,-50%) scale(1)'
-    //     })
-    // })
-    // document.querySelector('#child1').addEventListener("mouseleave",function(){
-    //     gsap.to('.cursor',{
-    //     transform: 'translate(-50%,-50%) scale(0)'
-    //     })
-    // })
     document.querySelectorAll('main').forEach(function (elem) {
       elem.addEventListener("mouseenter", function () {
         gsap.to('.cursor', {
@@ -68,6 +59,7 @@ export default function Home() {
       <Navbar />
       <Hero />
       <About />
+      <Projects />
     </main>
   );
 }
