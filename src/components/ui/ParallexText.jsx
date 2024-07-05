@@ -34,8 +34,12 @@ function ParallaxText({ children, baseVelocity = 100 }) {
 
     // Add event listener for scroll
     useEffect(() => {
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
+        try {
+            window.addEventListener("scroll", handleScroll);
+            return () => window.removeEventListener("scroll", handleScroll);
+        } catch (error) {
+            console.log("error", error)
+        }
     });
     // Update baseX only when scrolling is active
     useEffect(() => {

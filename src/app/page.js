@@ -12,7 +12,6 @@ export default function Home() {
 
   function cursoranimation() {
     document.addEventListener("mousemove", function (dets) {
-      console.log(dets.x);
       gsap.to(".cursor", {
         left: dets.x,
         top: dets.y,
