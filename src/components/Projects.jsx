@@ -1,4 +1,3 @@
-import ParallaxText from './ui/ParallexText'
 
 function Projects() {
     return (
