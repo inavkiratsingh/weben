@@ -2,7 +2,7 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-import LocomotiveScroll from "locomotive-scroll";
+// import LocomotiveScroll from "locomotive-scroll";
 import Start_pr from "@/components/Start_pr";
 import React, { useEffect } from "react";
 import gsap from "gsap";
@@ -42,10 +42,31 @@ export default function Home() {
 
   }
   useEffect(() => {
+    const initLocomotiveScroll = async () => {
+      // Dynamically import Locomotive Scroll
+      const LocomotiveScroll = (await import('locomotive-scroll')).default;
+
+      // Initialize Locomotive Scroll instance
+      const locomotiveScroll = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true, // Set Locomotive Scroll options as needed
+      });
+
+      // Update Locomotive Scroll on component mount
+      // locomotiveScroll.update();
+
+      // Optional: Handle window resize
+      // window.addEventListener('resize', () => {
+      //   locomotiveScroll.update();
+      // });
+    };
+
+    // Call initialization function
+    initLocomotiveScroll();
     cursoranimation()
   })
 
-  const locomotiveScroll = new LocomotiveScroll();
+  // const locomotiveScroll = new LocomotiveScroll();
   return (
     <main>
       <div className="rounded-full-3xl -translate-x-1/2 -translate-y-1/2 scale-0 opacity-0 cursor fixed">
