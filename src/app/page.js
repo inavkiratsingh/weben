@@ -2,8 +2,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
-// import LocomotiveScroll from "locomotive-scroll";
-import Start_pr from "@/components/Start_pr";
 import React, { useEffect } from "react";
 import gsap from "gsap";
 import Projects from "@/components/Projects";
@@ -68,14 +66,13 @@ export default function Home() {
 
   // const locomotiveScroll = new LocomotiveScroll();
   return (
-    <main>
-      <div className="rounded-full-3xl -translate-x-1/2 -translate-y-1/2 scale-0 opacity-0 cursor fixed">
+    <main className="w-full overflow-hidden">
+      <div className="rounded-full-3xl -translate-x-1/2 -translate-y-1/2 scale-0 opacity-0 cursor fixed sm:hidden">
         <svg width="20" height="25" xmlns="http://www.w3.org/2000/svg">
           <circle cx="10" cy="10" r="10" stroke="#FF5E5E" strokeWidth="1.2" fill="none" />
         </svg>
 
       </div>
-      <Start_pr />
       <Navbar />
       <Hero />
       <About />
